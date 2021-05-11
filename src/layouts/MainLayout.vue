@@ -10,7 +10,7 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer show-if-above v-model="left" side="left" bordered>
+    <q-drawer show-if-above v-model="left" side="left" :width="230" bordered>
       <q-icon
         class="q-pa-md"
         name="fas fa-dove"
@@ -27,9 +27,9 @@
           <q-item-section class="text-h6 text-weight-bold">Home</q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple to="/explore">
           <q-item-section avatar>
-            <q-icon color="primary" name="fas fa-hashtag" />
+            <q-icon name="fas fa-hashtag" />
           </q-item-section>
 
           <q-item-section class="text-h6 text-weight-bold"
@@ -37,45 +37,45 @@
           >
         </q-item>
 
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple to="/notifications">
           <q-item-section avatar>
-            <q-icon color="primary" name="far fa-bell" />
+            <q-icon name="far fa-bell" />
           </q-item-section>
 
           <q-item-section class="text-h6 text-weight-bold"
             >Notifications</q-item-section
           >
         </q-item>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple to="/messages">
           <q-item-section avatar>
-            <q-icon color="primary" name="far fa-envelope" />
+            <q-icon name="far fa-envelope" />
           </q-item-section>
 
           <q-item-section class="text-h6 text-weight-bold"
             >Messages</q-item-section
           >
         </q-item>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple to="/bookmarks">
           <q-item-section avatar>
-            <q-icon color="primary" name="far fa-bookmark" />
+            <q-icon name="far fa-bookmark" />
           </q-item-section>
 
           <q-item-section class="text-h6 text-weight-bold"
             >Bookmarks</q-item-section
           >
         </q-item>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple to="/lists">
           <q-item-section avatar>
-            <q-icon color="primary" name="far fa-list-alt" />
+            <q-icon name="far fa-list-alt" />
           </q-item-section>
 
           <q-item-section class="text-h6 text-weight-bold"
             >Lists</q-item-section
           >
         </q-item>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple to="/profile">
           <q-item-section avatar>
-            <q-icon color="primary" name="far fa-user" />
+            <q-icon name="far fa-user" />
           </q-item-section>
 
           <q-item-section class="text-h6 text-weight-bold"
@@ -84,7 +84,7 @@
         </q-item>
         <q-item clickable v-ripple>
           <q-item-section avatar>
-            <q-icon color="primary" name="fas fa-ellipsis-h" />
+            <q-icon name="fas fa-ellipsis-h" />
           </q-item-section>
 
           <q-item-section class="text-h6 text-weight-bold">More</q-item-section>
@@ -93,7 +93,11 @@
     </q-drawer>
 
     <q-drawer show-if-above v-model="right" side="right" bordered>
-      <!-- drawer content -->
+      <q-input rounded outlined v-model="text" label="Search Chirp">
+        <template v-slot:prepend>
+          <q-icon name="fas fa-search" />
+        </template>
+      </q-input>
     </q-drawer>
 
     <q-page-container>

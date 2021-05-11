@@ -37,5 +37,16 @@
     "node": ">= 10.18.1",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
-  }
+  },
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dezadkins/chirp-clone.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dezadkins/chirp-clone/issues"
+  },
+  "homepage": "https://github.com/dezadkins/chirp-clone#readme",
+  "keywords": []
 }

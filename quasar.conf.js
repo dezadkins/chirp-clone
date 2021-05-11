@@ -19,7 +19,9 @@ module.exports = function(/* ctx */) {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v1.quasar.dev/quasar-cli/boot-files
-    boot: [],
+    boot: [
+      "fontawesome-pro" // Add boot file
+    ],
 
     // https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-css
     css: ["app.sass"],
@@ -76,7 +78,7 @@ module.exports = function(/* ctx */) {
 
     // https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
     framework: {
-      iconSet: "material-icons", // Quasar icon set
+      iconSet: "fontawesome-v5-pro", // Quasar icon set
       lang: "en-us", // Quasar language pack
       config: {},
 
